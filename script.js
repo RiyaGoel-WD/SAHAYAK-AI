@@ -1,6 +1,4 @@
-// ================================
-// SCREEN NAVIGATION
-// ================================
+
 
 function showScreen(screenId) {
   // Hide all screens
@@ -12,9 +10,6 @@ function showScreen(screenId) {
 }
 
 
-// ================================
-// SOS — SHARED DATA
-// ================================
 
 var selectedEmergency = '';
 var userLocation = {
@@ -24,14 +19,12 @@ var userLocation = {
 };
 
 
-// ================================
-// SOS — STEP 1: Select Emergency
-// ================================
+
 
 function selectEmergency(type) {
   selectedEmergency = type;
 
-  // Map type to a readable label
+  
   var labels = {
     medical: '🏥 Medical / Accident',
     crime:   '🚔 Crime / Assault',
@@ -40,7 +33,7 @@ function selectEmergency(type) {
 
   document.getElementById('display-emergency-type').innerText = labels[type];
 
-  // Get live location from the browser
+  
   document.getElementById('display-location').innerText = 'Fetching your location...';
 
   if (navigator.geolocation) {
@@ -63,7 +56,7 @@ function selectEmergency(type) {
     document.getElementById('display-location').innerText = userLocation.text;
   }
 
-  // Auto-add one contact field if the list is empty
+ 
   var list = document.getElementById('contacts-list');
   if (list.children.length === 0) {
     addContactField();
@@ -75,9 +68,7 @@ function selectEmergency(type) {
 }
 
 
-// ================================
-// SOS — STEP 2: Contacts & Alert
-// ================================
+
 
 function goBackToStep1() {
   document.getElementById('sos-step-2').style.display = 'none';
@@ -114,7 +105,7 @@ function sendAlert() {
     return;
   }
 
-  // Build the emergency alert message
+ 
   var emergencyLabels = {
     medical: 'Medical Emergency / Accident',
     crime:   'Crime / Assault',
@@ -131,18 +122,16 @@ function sendAlert() {
     'Please help immediately!\n' +
     'Sent via Sahayak AI';
 
-  // Show the message in the preview box
+  
   document.getElementById('alert-preview-box').innerText = message;
 
-  // Move to step 3
+  
   document.getElementById('sos-step-2').style.display = 'none';
   document.getElementById('sos-step-3').style.display = 'block';
 }
 
 
-// ================================
-// SOS — STEP 3: Find Help & Reset
-// ================================
+
 
 function findNearestHelp() {
   // 'selectedEmergency' holds 'medical', 'crime', or 'cyber'
@@ -156,7 +145,7 @@ function findNearestHelp() {
 }
 
 function resetSOS() {
-  // Clear everything and go home
+ 
   selectedEmergency = '';
   userLocation = { lat: null, lng: null, text: 'Fetching...' };
 
