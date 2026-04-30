@@ -1,0 +1,301 @@
+/* ================================
+   GLOBAL RESET & BASE STYLES
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f4f8;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================================
+   SCREEN SYSTEM
+   Only .active screen is visible
+================================ */
+.screen {
+  display: none;
+  width: 100%;
+  max-width: 420px;
+  padding: 24px;
+}
+
+.screen.active {
+  display: block;
+}
+
+/* ================================
+   HOME SCREEN
+================================ */
+.app-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #1a1a2e;
+  margin-bottom: 6px;
+}
+
+.app-subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 32px;
+}
+
+.feature-btn {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 16px;
+  border: none;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: left;
+  transition: transform 0.1s;
+  display: block;
+}
+
+.feature-btn:active {
+  transform: scale(0.97);
+}
+
+.btn-sos      { background: #ff4757; color: white; }
+.btn-fraud    { background: #ffa502; color: white; }
+.btn-location { background: #2ed573; color: #1a1a2e; }
+
+.btn-subtitle {
+  font-size: 13px;
+  font-weight: normal;
+  opacity: 0.85;
+  display: block;
+  margin-top: 4px;
+}
+
+/* ================================
+   SHARED SCREEN ELEMENTS
+================================ */
+.screen-header {
+  margin-bottom: 24px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.screen-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1a1a2e;
+  margin-bottom: 6px;
+}
+
+.screen-desc {
+  font-size: 14px;
+  color: #666;
+}
+
+.center {
+  text-align: center;
+}
+
+/* ================================
+   SOS — STEP 1: Emergency Type
+================================ */
+.emergency-type-btn {
+  width: 100%;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  border: none;
+  border-radius: 14px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: left;
+  color: white;
+  transition: transform 0.1s;
+  display: block;
+}
+
+.emergency-type-btn:active {
+  transform: scale(0.97);
+}
+
+.medical { background: #ff4757; }
+.crime   { background: #3742fa; }
+.cyber   { background: #ffa502; color: #1a1a2e; }
+
+/* ================================
+   SOS — STEP 2: Confirm & Send
+================================ */
+.info-card {
+  background: white;
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  font-size: 13px;
+  color: #888;
+}
+
+.info-value {
+  font-size: 14px;
+  font-weight: bold;
+  color: #1a1a2e;
+  text-align: right;
+  max-width: 200px;
+}
+
+.contacts-section {
+  background: white;
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.contacts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.contacts-title {
+  font-size: 15px;
+  font-weight: bold;
+  color: #1a1a2e;
+}
+
+.add-contact-btn {
+  background: #f0f4f8;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #3742fa;
+  cursor: pointer;
+}
+
+.contact-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.contact-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.contact-input:focus {
+  border-color: #3742fa;
+}
+
+.remove-contact-btn {
+  background: #fff0f0;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 10px;
+  color: #ff4757;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.send-alert-btn {
+  width: 100%;
+  padding: 18px;
+  background: #ff4757;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: transform 0.1s;
+}
+
+.send-alert-btn:active {
+  transform: scale(0.97);
+}
+
+/* ================================
+   SOS — STEP 3: Confirmation
+================================ */
+.success-icon {
+  font-size: 64px;
+  text-align: center;
+  margin: 20px 0 16px;
+}
+
+.alert-preview {
+  background: #1a1a2e;
+  color: #a8ff78;
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 20px 0;
+  white-space: pre-wrap;
+  font-family: monospace;
+}
+
+.find-help-btn {
+  width: 100%;
+  padding: 16px;
+  background: #2ed573;
+  color: #1a1a2e;
+  border: none;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.back-home-btn {
+  width: 100%;
+  padding: 14px;
+  background: #f0f4f8;
+  color: #666;
+  border: none;
+  border-radius: 14px;
+  font-size: 15px;
+  cursor: pointer;
+}
