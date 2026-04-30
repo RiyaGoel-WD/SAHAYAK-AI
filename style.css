@@ -1,6 +1,4 @@
-/* ================================
-   GLOBAL RESET & BASE STYLES
-================================ */
+
 * {
   margin: 0;
   padding: 0;
@@ -16,10 +14,7 @@ body {
   justify-content: center;
 }
 
-/* ================================
-   SCREEN SYSTEM
-   Only .active screen is visible
-================================ */
+
 .screen {
   display: none;
   width: 100%;
@@ -31,9 +26,7 @@ body {
   display: block;
 }
 
-/* ================================
-   HOME SCREEN
-================================ */
+
 .app-title {
   text-align: center;
   font-size: 28px;
@@ -79,9 +72,7 @@ body {
   margin-top: 4px;
 }
 
-/* ================================
-   SHARED SCREEN ELEMENTS
-================================ */
+
 .screen-header {
   margin-bottom: 24px;
 }
@@ -113,9 +104,7 @@ body {
   text-align: center;
 }
 
-/* ================================
-   SOS — STEP 1: Emergency Type
-================================ */
+
 .emergency-type-btn {
   width: 100%;
   padding: 18px 20px;
@@ -139,9 +128,7 @@ body {
 .crime   { background: #3742fa; }
 .cyber   { background: #ffa502; color: #1a1a2e; }
 
-/* ================================
-   SOS — STEP 2: Confirm & Send
-================================ */
+
 .info-card {
   background: white;
   border-radius: 14px;
@@ -255,9 +242,7 @@ body {
   transform: scale(0.97);
 }
 
-/* ================================
-   SOS — STEP 3: Confirmation
-================================ */
+
 .success-icon {
   font-size: 64px;
   text-align: center;
