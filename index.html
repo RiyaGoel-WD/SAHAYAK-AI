@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sahayak AI</title>
 
-  <!-- This line loads your CSS file -->
+ 
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- HOME SCREEN -->
+ 
   <div class="screen active" id="screen-home">
     <div class="app-title">🛡️ Sahayak AI</div>
     <div class="app-subtitle">Your personal safety companion</div>
@@ -31,10 +31,10 @@
     </button>
   </div>
 
-  <!-- SOS SCREEN -->
+ 
   <div class="screen" id="screen-sos">
 
-    <!-- PART 1: Choose emergency type -->
+   
     <div id="sos-step-1">
       <div class="screen-header">
         <button class="back-btn" onclick="showScreen('screen-home')">← Back</button>
@@ -58,7 +58,7 @@
       </button>
     </div>
 
-    <!-- PART 2: Confirm & Send Alert -->
+   
     <div id="sos-step-2" style="display:none;">
       <div class="screen-header">
         <button class="back-btn" onclick="goBackToStep1()">← Back</button>
@@ -89,7 +89,7 @@
       </button>
     </div>
 
-    <!-- PART 3: Alert Sent confirmation -->
+   
     <div id="sos-step-3" style="display:none;">
       <div class="success-icon">✅</div>
       <h2 class="screen-title center">Alert Sent!</h2>
@@ -108,7 +108,7 @@
 
   </div>
 
-  <!-- FRAUD SCREEN (teammate's work) -->
+ 
   <div class="screen" id="screen-fraud">
     <div class="screen-header">
       <button class="back-btn" onclick="showScreen('screen-home')">← Back</button>
@@ -117,7 +117,7 @@
     </div>
   </div>
 
-  <!-- LOCATION SCREEN (teammate's work) -->
+
   <div class="screen" id="screen-location">
     <div class="screen-header">
       <button class="back-btn" onclick="showScreen('screen-home')">← Back</button>
@@ -126,7 +126,7 @@
     </div>
   </div>
 
-  <!-- This line loads your JS file — always at the bottom -->
+  
   <script src="script.js"></script>
 
 </body>
